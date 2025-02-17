@@ -1,0 +1,30 @@
+.jdiTxt{
+    width: 100%;
+    font-size: 6vw;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0;
+}
+.jdiTxt img{
+    filter: invert(1);
+    width: 10vw;
+    height: 10vh;
+    object-fit: contain;
+}
+.jdi{
+    position: relative;
+    /* animation: autoBlurAnim linear both; */
+    animation-timeline: view();
+}
+@keyframes autoBlurAnim {
+    0%{
+        right: -40vw;
+    }
+    100%{
+        right: 40vw;
+    }
+}

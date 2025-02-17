@@ -1,0 +1,126 @@
+.home {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.homeBg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.homeBg img {
+    position: relative;
+    top: 10vh;
+    width: 60vw;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.homeBgTxt {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+}
+
+.homeBgL {
+    font-style: oblique;
+    font-size: 2rem;
+    position: absolute;
+    left: 35%;
+    top: 8rem;
+}
+
+.homeBgR {
+    font-weight: 700;
+    font-size: 4rem;
+    position: absolute;
+    right: 25%;
+    top: 10rem;
+    line-height: 1.1;
+}
+
+.homeShoes {
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    gap: 20%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.homeShoes img {
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+    object-fit: contain;
+}
+
+.homeBottom {
+    position: relative;
+    top: -2rem;
+    padding: 0 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomL button {
+    color: #fff;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+    scale: 1.4;
+    cursor: pointer;
+}
+
+.bottomL button svg {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.bottomL button span {
+    font-size: 0.5rem;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+.bottomL button p {
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.bottomM {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bottomM .non-active {
+    font-size: 1rem;
+    color: #ffffff76;
+}
+
+.bottomM .active {
+    transition: .5s;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.bottomR {
+    display: flex;
+    gap: 1.5rem;
+    color: #fff;
+}
+
+.bottomR svg {
+    cursor: pointer;
+}

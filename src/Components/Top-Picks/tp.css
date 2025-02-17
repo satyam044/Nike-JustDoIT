@@ -1,0 +1,23 @@
+.Top-Picks{
+    margin-top: 10vh;
+}
+.Top-Picks>h2{
+    width: 100%;
+    position: relative;
+    left: 5%;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.tp-items{
+    width: 90%;
+    padding: 1rem 0;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem;
+    position: relative;
+    left: 5%;
+}
+.tp-items::-webkit-scrollbar{
+    display: none;
+}

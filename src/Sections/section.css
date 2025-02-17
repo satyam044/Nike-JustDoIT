@@ -1,0 +1,36 @@
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.section>h2{
+    margin: 10vh 0;
+    width: 100%;
+    position: relative;
+    left: 5%;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.section-items{
+    width: 90%;
+    padding: 1rem 0;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 1rem;
+}
+.section-items::-webkit-scrollbar{
+    display: none;
+}
+.section>button{
+    width: 90%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background: #413468;
+    color: #fff;
+    cursor: pointer;
+}
+.section>button:hover{
+    background: none;
+}
