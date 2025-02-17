@@ -1,37 +1,71 @@
-import React, { useRef } from 'react'
-import './home.css'
+import React, { useRef } from 'react';
+import './home.css';
 import { BsPlayCircle } from "react-icons/bs";
 import { FaFacebookSquare, FaTwitter, FaYoutube } from "react-icons/fa";
-import nikeLogo from '../Assets/NikeLogo.png'
-import nikeShoes1 from '../Assets/NikeShoes1.png'
-import nikeShoes2 from '../Assets/NikeShoes2.png'
-import nikeShoes3 from '../Assets/NikeShoes3.png'
+import nikeLogo from '../Assets/NikeLogo.png';
+import nikeShoes1 from '../Assets/NikeShoes1.png';
+import nikeShoes2 from '../Assets/NikeShoes2.png';
+import nikeShoes3 from '../Assets/NikeShoes3.png';
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap'
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const home = () => {
+gsap.registerPlugin(ScrollTrigger);
 
-    const homeImgRef = useRef();
-    useGSAP(()=>{
-        gsap.to(homeImgRef,{
-            
-        })
-    })
+const Home = () => {
+    const bottomMRef = useRef();
+
+    useGSAP(() => {
+        ScrollTrigger.create({
+            trigger: ".home",
+            start: "top 15%",
+            end: "+=200%",
+            pin: true,
+            scrub: 1,
+        });
+
+        ScrollTrigger.create({
+            trigger: ".home",
+            start: "top 15%",
+            end: "+=200%",
+            scrub: 1,
+            onUpdate: (self) => {
+                const progress = self.progress;
+
+                if (progress < 0.33) {
+                    gsap.to(".homeImg", { x: '0%' });
+                    bottomMRef.current.children[0].classList.add('active');
+                    bottomMRef.current.children[1].classList.remove('active');
+                    bottomMRef.current.children[2].classList.remove('active');
+                } else if (progress < 0.66) {
+                    gsap.to(".homeImg", { x: '-130%' });
+                    bottomMRef.current.children[0].classList.remove('active');
+                    bottomMRef.current.children[1].classList.add('active');
+                    bottomMRef.current.children[2].classList.remove('active');
+                } else {
+                    gsap.to(".homeImg", { x: '-260%' });
+                    bottomMRef.current.children[0].classList.remove('active');
+                    bottomMRef.current.children[1].classList.remove('active');
+                    bottomMRef.current.children[2].classList.add('active');
+                }
+            },
+        });
+    });
 
     return (
         <>
             <div className="home">
                 <div className="homeBg">
-                    <img src={nikeLogo} />
+                    <img src={nikeLogo} alt="Nike Logo" />
                     <div className="homeBgTxt">
                         <div className="homeBgL">NIKE</div>
                         <div className="homeBgR">JUST <br /> DO <br /> IT.</div>
                     </div>
                 </div>
-                <div className="homeShoes" ref={homeImgRef}>
-                    <img src={nikeShoes1} />
-                    <img src={nikeShoes2} />
-                    <img src={nikeShoes3} />
+                <div className="homeShoes">
+                    <img src={nikeShoes1} className='homeImg' alt="Nike Shoes 1" />
+                    <img src={nikeShoes2} className='homeImg' alt="Nike Shoes 2" />
+                    <img src={nikeShoes3} className='homeImg' alt="Nike Shoes 3" />
                 </div>
                 <div className="homeBottom">
                     <div className="bottomL">
@@ -43,7 +77,7 @@ const home = () => {
                             </div>
                         </button>
                     </div>
-                    <div className="bottomM">
+                    <div className="bottomM" ref={bottomMRef}>
                         <h2 className='active'>01</h2>
                         <h2 className='non-active'>02</h2>
                         <h2 className='non-active'>03</h2>
@@ -56,7 +90,7 @@ const home = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default home
+export default Home;
