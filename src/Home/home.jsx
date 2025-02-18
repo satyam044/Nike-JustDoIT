@@ -33,17 +33,17 @@ const Home = () => {
                 const progress = self.progress;
 
                 if (progress < 0.33) {
-                    gsap.to(".homeImg", { x: '0%' });
+                    gsap.to(".homeImg", { x: '110%' });
                     bottomMRef.current.children[0].classList.add('active');
                     bottomMRef.current.children[1].classList.remove('active');
                     bottomMRef.current.children[2].classList.remove('active');
                 } else if (progress < 0.66) {
-                    gsap.to(".homeImg", { x: '-130%' });
+                    gsap.to(".homeImg", { x: '-160%' });
                     bottomMRef.current.children[0].classList.remove('active');
                     bottomMRef.current.children[1].classList.add('active');
                     bottomMRef.current.children[2].classList.remove('active');
                 } else {
-                    gsap.to(".homeImg", { x: '-260%' });
+                    gsap.to(".homeImg", { x: '-420%' });
                     bottomMRef.current.children[0].classList.remove('active');
                     bottomMRef.current.children[1].classList.remove('active');
                     bottomMRef.current.children[2].classList.add('active');
