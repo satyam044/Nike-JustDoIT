@@ -1,10 +1,11 @@
 .home {
-    height: 100vh;
+    height: 90vh !important;
     width: 100%;
     overflow: hidden;
 }
 
 .homeBg {
+    height: 80%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,35 +14,23 @@
 }
 
 .homeBg img {
-    position: relative;
-    top: 10vh;
     width: 60vw;
     object-fit: contain;
     filter: invert(1);
+    position: absolute;
 }
 
 .homeBgTxt {
     height: 100%;
     width: 100%;
-    position: absolute;
     color: #fff;
-}
-
-.homeBgL {
-    font-style: oblique;
-    font-size: 2rem;
-    position: absolute;
-    left: 35%;
-    top: 8rem;
-}
-
-.homeBgR {
     font-weight: 700;
-    font-size: 4rem;
-    position: absolute;
-    right: 25%;
-    top: 10rem;
+    font-size: 4vw;
     line-height: 1.1;
+    display: flex;
+    justify-content: space-around;
+    gap: 20%;
+    align-items: center;
 }
 
 .homeShoes {
@@ -115,7 +104,7 @@
 }
 
 .bottomM h2 {
-    cursor: pointer;
+    cursor: default;
 }
 
 .bottomM .non-active {

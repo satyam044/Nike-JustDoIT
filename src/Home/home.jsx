@@ -58,8 +58,9 @@ const Home = () => {
                 <div className="homeBg">
                     <img src={nikeLogo} alt="Nike Logo" />
                     <div className="homeBgTxt">
-                        <div className="homeBgL">NIKE</div>
+                        <div className="homeBgL">Nike</div>
                         <div className="homeBgR">JUST <br /> DO <br /> IT.</div>
+                        
                     </div>
                 </div>
                 <div className="homeShoes">
@@ -78,7 +79,7 @@ const Home = () => {
                         </button>
                     </div>
                     <div className="bottomM" ref={bottomMRef}>
-                        <h2 className='active'>01</h2>
+                        <h2 className='non-active'>01</h2>
                         <h2 className='non-active'>02</h2>
                         <h2 className='non-active'>03</h2>
                     </div>
