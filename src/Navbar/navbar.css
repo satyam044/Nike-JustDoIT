@@ -56,3 +56,9 @@
 .navLinks ul li:active{
   background-color: #27155498;
 }
+
+@media screen and (max-width:768px) {
+  .navbar{
+    padding: 0.5rem 2rem;
+  }
+}

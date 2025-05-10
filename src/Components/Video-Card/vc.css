@@ -1,5 +1,5 @@
 .featured{
-    height: 90vh;
+    height: 100%;
     width: 100%;
     margin: 10vh 0;
 }
@@ -10,18 +10,19 @@
     color: #fff;
 }
 .cards{
-    padding: 0 5rem;
+    padding: 0 1rem;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.4rem;
     align-items: center;
     position: relative;
 }
 .card{
     width: 30%;
-    height: 90%;
+    height: 70vh;
     position: relative;
     cursor: pointer;
     border-radius: 10px;
@@ -56,4 +57,18 @@
     transform: translateX(-50%);
     /* filter: invert(1); */
     mix-blend-mode:difference ;
+}
+
+@media screen and (max-width:768px) {
+    .cards{
+        margin: 2rem 0;
+        flex-direction: column;
+    }
+    .card{
+        height: 60vh;
+        width: 80%;
+    }
+    .f-txt{
+        font-size: 1rem;
+    }
 }

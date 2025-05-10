@@ -1,5 +1,5 @@
 .home {
-    height: 90vh !important;
+    height: 90dvh !important;
     width: 100%;
     overflow: hidden;
 }
@@ -42,7 +42,7 @@
     overflow: hidden;
     margin: auto;
     filter: drop-shadow(2px 2px 5px black);
-    mask-image: linear-gradient(to right, black,white);
+    mask-image: linear-gradient(to right, black, white);
 }
 
 .homeShoes img {
@@ -58,7 +58,7 @@
     position: absolute;
     height: 10vh;
     width: 100%;
-    bottom: 20%;
+    bottom: 10%;
     padding: 0 5rem;
     box-sizing: border-box;
     display: flex;
@@ -90,7 +90,7 @@
 }
 
 .bottomL button p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     letter-spacing: 1px;
 }
@@ -125,4 +125,31 @@
 
 .bottomR svg {
     cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .homeBottom {
+        padding: 0 1rem;
+    }
+
+    .homeBottom button {
+        scale: unset;
+    }
+
+    .bottomM {
+        gap: 1rem;
+        position: absolute;
+        top: -2.4rem;
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .bottomM .active {
+        font-size: 1.5rem !important;
+    }
+
+    .bottomM .non-active {
+        font-size: 0.8rem;
+    }
 }

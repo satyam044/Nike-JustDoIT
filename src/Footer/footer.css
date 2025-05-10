@@ -1,27 +1,32 @@
-.Big-footer{
+.Big-footer {
     width: 90%;
-    padding: 2rem 0;
-    background:linear-gradient(to bottom left, #413468 ,#271554);
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom left, #413468, #271554);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
     border: 2px solid #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
     color: #fff;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+    row-gap: 1rem;
+    text-align: center;
 }
-.Big-footer ul li{
+
+.Big-footer ul li {
     list-style: none;
     margin: 1rem 0;
     cursor: pointer;
 }
-.Big-footer ul li:hover{
+
+.Big-footer ul li:hover {
     text-decoration: underline;
 }
 
-.small-footer{
+.small-footer {
     margin-top: 2vh;
     margin-bottom: 5vh;
     width: 90%;
@@ -36,25 +41,31 @@
     color: #fff;
     overflow: hidden;
 }
-.small-footer .f-icons{
+
+.small-footer .f-icons {
     margin: 5vh 0;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
-.small-footer ul{
+
+.small-footer ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
     list-style: none;
     text-decoration: underline;
 }
-.small-footer ul li,.small-footer .f-icons svg{
+
+.small-footer ul li,
+.small-footer .f-icons svg {
     cursor: pointer;
 }
-.small-footer .f-copyright{
+
+.small-footer .f-copyright {
     width: 100%;
     position: absolute;
     bottom: 0;
     padding: 0.5rem;
+    box-sizing: border-box;
 }

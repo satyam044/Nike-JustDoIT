@@ -18,7 +18,7 @@ const Home = () => {
     useGSAP(() => {
         ScrollTrigger.create({
             trigger: ".home",
-            start: "top 15%",
+            start: "top 10%",
             end: "+=200%",
             pin: true,
             scrub: 1,
@@ -26,7 +26,7 @@ const Home = () => {
 
         ScrollTrigger.create({
             trigger: ".home",
-            start: "top 15%",
+            start: "top 10%",
             end: "+=200%",
             scrub: 1,
             onUpdate: (self) => {
